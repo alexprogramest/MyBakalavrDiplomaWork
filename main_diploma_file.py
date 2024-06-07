@@ -671,7 +671,7 @@ class MyMainWindow(QtWidgets.QMainWindow):
         # print(nx.get_node_attributes(current_graph_data, "node_pos"))
         # print("asfasdf")
         file_name_for_save, _ = QtWidgets.QFileDialog.getSaveFileName(self, "Export graph to:",
-                                                                      "some_example.graphml",
+                                                                      "graphs_for_test/some_example.graphml",
                                                                       "Graph format file (*.graphml)")
         # if file_name_for_save
         # print(file_name_for_save == "")
@@ -689,7 +689,7 @@ class MyMainWindow(QtWidgets.QMainWindow):
 
     def import_graph_from_file(self):
         file_name_to_import, _ = QtWidgets.QFileDialog.getOpenFileName(self, "Import graph from:",
-                                                                       "",
+                                                                       "graphs_for_test",
                                                                        "Graph format file (*.graphml)")
         if file_name_to_import != "":
             graph_from_file = nx.read_graphml(file_name_to_import)
